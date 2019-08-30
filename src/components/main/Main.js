@@ -1,29 +1,21 @@
-import React, { useState, useEffect }  from 'react'
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Notfound from '../404/Notfound';
-import Footer from '../footer/Footer.js';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from '../pages/home/Home';
+import Kontakt from '../pages/kontakt/Kontakt';
+import Angebot from '../pages/angebot/Angebot';
+import Ubermich from '../pages/uebermich/Uebermich';
+import Notfound from '../pages/404/Notfound';
 
 function Main() {
-    // Declare a new state variable, which we'll call "count"
-    const [count, setCount] = useState(0);
-
-    // Similar to componentDidMount and componentDidUpdate:
-    useEffect(() => {
-        console.log('test');
-    });
-
     return (
-        <main className={"fh-main " + count}>
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-            </button>
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Footer} />
-                    <Route path="/users" component={Footer} />
-                    <Route component={Notfound} />
-                </Switch>
-            </Router>
+        <main className="fh-main">
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/kontakt" component={Kontakt} />
+                <Route path="/ueber-mich" component={Ubermich} />
+                <Route path="/angebot" component={Angebot} />
+                <Route component={Notfound} />
+            </Switch>
         </main>
     );
 }
