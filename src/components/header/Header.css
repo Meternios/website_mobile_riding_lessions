@@ -1,0 +1,72 @@
+.fh-header .fh-mainLogo {
+    flex-grow: 1;
+}
+
+.fh-header .fh-nav {
+    text-align: right;
+    flex-grow: 2;
+}
+
+.fh-header .fh-navMenu > li {
+    display: inline-block;
+}
+
+.fh-header .fh-navMenu > li:not(:last-child) {
+    padding-right: 20px;
+}
+
+.fh-header .fh-navMenu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fh-header .fh-navMenuDrawner {
+    display: none;
+}
+
+@media screen and ( max-width: 1028px ) {
+    .fh-header > .MuiContainer-root {
+        max-width: initial;
+    }
+
+    .fh-header .fh-nav {
+        display: none;
+    }
+
+    .fh-header .fh-navMenuDrawner {
+        display: block;
+    }
+
+    .fh-header .fh-mainLogo {
+        text-align: center;
+    }
+}
+
+.fh-drawner .fh-navMenu {
+    margin: 0;
+    padding: 25px 50px 50px 50px;
+}
+
+.fh-drawner .fh-navMenu > li {
+    list-style: none;
+}
+
+.fh-drawner .fh-navMenu > li:not(:last-child) {
+    padding-bottom: 20px;
+}
+
+.fh-drawner .fh-navMenu a {
+    text-decoration: none;
+    color: #000;
+}
+
+.fh-drawner .fh-mainLogo {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #000;
+}
+
+.fh-header img,
+.fh-drawner img {
+    width: 100px;
+}
